@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" version="3.0">
+  <display-name>beerV1</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+  </welcome-file-list>
+  <context-param>
+    <param-name>breed</param-name>
+    <param-value>Boxer</param-value>
+  </context-param>
+  <context-param>
+    <param-name>mainEmail</param-name>
+    <param-value>donoi2000@gmail.com</param-value>
+  </context-param>
+  <servlet><!-- servletmapping -->
+    <servlet-name>SimplePOSTparameterprint</servlet-name>
+    <servlet-class>com.example.web.BeerSelect</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>logicplusmanualprint</servlet-name>
+    <servlet-class>com.example.web.BeerSelect2</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>logicplusJSP</servlet-name>
+    <servlet-class>com.example.web.BeerSelect3</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SimplePOSTparameterprint</servlet-name>
+    <url-pattern>/beer/SelectBeer.do</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>logicplusmanualprint</servlet-name>
+    <url-pattern>/beer/SelectBeer2.do</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>logicplusJSP</servlet-name>
+    <url-pattern>/beer/SelectBeer3.do</url-pattern>
+  </servlet-mapping>
+  <servlet><!-- cookietest -->
+    <servlet-name>cookie</servlet-name>
+    <servlet-class>session.CookieTest</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>cookie</servlet-name>
+    <url-pattern>/session/cookietest.do</url-pattern>
+  </servlet-mapping>
+  <servlet><!-- initparamtest -->
+    <servlet-name>BeerParamTests</servlet-name>
+    <servlet-class>com.example.TestInitParams</servlet-class>
+    <init-param>
+      <param-name>email1</param-name>
+      <param-value>donoi2000@gmail.com</param-value>
+    </init-param>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>BeerParamTests</servlet-name>
+    <url-pattern>/Tester.do</url-pattern>
+  </servlet-mapping>
+  <session-config><!-- session -->
+    <session-timeout>15</session-timeout>
+  </session-config>
+  <servlet>
+    <servlet-name>session</servlet-name>
+    <servlet-class>session.SessionCheck</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>session</servlet-name>
+    <url-pattern>/session.do</url-pattern>
+  </servlet-mapping>
+  <listener><!-- listener -->
+    <listener-class>com.example.listener.MyServletContextListener</listener-class>
+  </listener>
+  <servlet>
+    <servlet-name>Listenertester</servlet-name>
+    <servlet-class>com.example.listener.ListenerTester</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Listenertester</servlet-name>
+    <url-pattern>/listen.do</url-pattern>
+  </servlet-mapping>
+  <servlet><!-- el -->
+    <servlet-name>newarray</servlet-name>
+    <servlet-class>expression.language.NewArray</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>newarray</servlet-name>
+    <url-pattern>/arraylist.do</url-pattern>
+  </servlet-mapping>
+  
+  
+</web-app>
