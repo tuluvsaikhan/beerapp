@@ -44,6 +44,14 @@
     <servlet-name>cookie</servlet-name>
     <url-pattern>/session/cookietest.do</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <servlet-name>cookie2</servlet-name>
+    <servlet-class>session.CheckCookie</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>cookie2</servlet-name>
+    <url-pattern>/session/checkcookie.do</url-pattern>
+  </servlet-mapping>
   <servlet><!-- initparamtest -->
     <servlet-name>BeerParamTests</servlet-name>
     <servlet-class>com.example.TestInitParams</servlet-class>

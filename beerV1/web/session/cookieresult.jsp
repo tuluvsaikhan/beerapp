@@ -5,6 +5,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-<a href="checkcookie.do">clich here</a>
+<a href="checkcookie.do">click here</a>
 </body>
 </html>
